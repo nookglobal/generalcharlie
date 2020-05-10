@@ -1,37 +1,103 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/nookglobal/generalcharlie/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+General Charlie Website
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Features
 
-### Markdown
+- [X] 🤩 Page Transitions, component-based (with no-js support)
+- [X] 👮‍♂️ `IntersectionObserver`, component-based (with polyfill)
+- [X] 🌿 React Context for global UI state, with SSR
+- [X] 💅 [`styled-components`](https://www.styled-components.com/) v4
+- [X] 💯 Optimized with [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/) (including test)
+- [X] 🔥 Code Splitting of CSS and JS (component based)
+- [X] 🔪 Inline SVG support
+- [X] ⚙️ One config file for site-wide settings
+- [X] 💙 Most social + meta tags in one component
+- [X] 🖼 All favicons generated, only one icon file needed
+- [X] 🌐 Offline support
+- [X] 📄 Manifest support
+- [X] 🗺 Sitemap support
+- [X] 📱 Generated media queries for easy use
+- [X] 😎 [Prettier](https://prettier.io/) for code style
+- [X] 👷‍♂️ [CircleCI](https://circleci.com/) support
+- [X] 🐙 Schema JSONLD
+- [X] 🔎 [`size-plugin`](https://github.com/GoogleChromeLabs/size-plugin) to keep an eye on your bundle sizes
+- [X] 👨‍🏫 ESLint (based on [`eslint-plugin-react`](./.eslintrc))
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Do you have suggestions or feedback? [Open an issue](https://github.com/fabe/gatsby-universal/issues/new)!
 
-```markdown
-Syntax highlighted code block
+## Lighthouse scores (on [Netlify](https://netlify.com))
 
-# Header 1
-## Header 2
-### Header 3
+[![Lighthouse scores (on Netlify)](https://lighthouse.now.sh/?perf=100&pwa=100&a11y=100&bp=100&seo=100)](https://circleci.com/gh/fabe/gatsby-universal)
 
-- Bulleted
-- List
+## Usage
 
-1. Numbered
-2. List
+[![Edit on CodeSandbox](https://cdn.rawgit.com/fabe/1dd805eed0153b47aba2b50cea2469ec/raw/64b0ea90c2a425d3847da908053f5f337128259b/edit-on-codesandbox-32px.svg)](https://codesandbox.io/s/github/fabe/gatsby-universal)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/fabe/gatsby-universal)
 
-**Bold** and _Italic_ and `Code` text
+```bash
+# Installation with `gatsby-cli`
+gatsby new my-site https://github.com/fabe/gatsby-universal
 
-[Link](url) and ![Image](src)
+# Installation with `git clone`
+git clone git@github.com:fabe/gatsby-universal.git my-site
+cd my-site
+yarn install
+
+# To develop
+yarn develop
+
+# To build
+yarn build
+
+# To test SSR (for Lighthouse etc.)
+yarn ssr
+
+# To format JS (precommit)
+yarn format
+
+# To generate favicons (included in `build`)
+yarn build:favicons
+
+# To deploy
+yarn deploy
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Configuration
 
-### Jekyll Themes
+Find the site-wide configuration in `site-config.js`.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/nookglobal/generalcharlie/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+> 🚨 Don't forget to update your `robots.txt` inside `static/`!
 
-### Support or Contact
+## Folder structure
+```bash
+├── gatsby-browser.js # Specify how Gatsby renders pages in the browser
+├── gatsby-config.js # Gatsby config, mostly taken from `site-config.js`
+├── gatsby-node.js # Modify webpack config
+├── gatsby-ssr.js # Specify how Gatsby builds pages
+├── site-config.js # Global settings for the whole site, used by multiple scripts
+├── content # Content & data, in both json and markdown
+├── src
+│   ├── components
+│   │   ├── head # All meta tags etc.
+│   │   ├── io # Intersection Observer component, uses render props
+│   │   ├── layout # Layout component
+│   │   │   ├── layout.css.js # .css.js for component's `styled-components`
+│   │   │   └── layout.js
+│   │   └── transition # Page Transition component, used by Gatsby APIs
+│   ├── constants # Site-wide constants (breakpoints, colors, etc.)
+│   ├── containers # Container components if store is needed
+│   ├── helpers
+│   │   ├── schemaGenerator.js # Generates JSON-LD schema.org snippets
+│   │   └── mediaTemplates.js # Creates media queries for styled-components
+│   ├── images # Images needed by the site/theme (not content)
+│   ├── pages
+│   ├── store # Store and provider of a React.createContext instance
+│   └── global.css.js # Global CSS
+└── scripts
+    ├── lighthouse.test.js # Tests the site specified inside `site-config.js` with Google Lighthouse (WIP)
+    └── favicons.js # Generates favicons and manifest using one png only.
+```
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Boilerplate / Gatsby Starter
+* https://github.com/fabe/gatsby-universal
+* Fabian Schultz ([@fschultz_](https://twitter.com/fschultz_)) - [Stink Studios](https://stinkstudios.com)
