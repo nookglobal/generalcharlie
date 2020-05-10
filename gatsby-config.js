@@ -1,7 +1,7 @@
 const siteConfig = require('./site-config');
-
+const pathPrefix = `generalcharlie`;
 module.exports = {
-  pathPrefix: `/generalcharlie`,
+  pathPrefix: `/${pathPrefix}`,
   siteMetadata: {
     ...siteConfig,
   },
@@ -9,6 +9,14 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      modifyURLPrefix: {
+        // If `pathPrefix` is configured by user, we should replace
+        // the default prefix with `pathPrefix`.
+        "/": `${pathPrefix}/`,
+      },
+    },
     `gatsby-transformer-json`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-eslint`,

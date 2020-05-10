@@ -3,8 +3,8 @@
   "license": "MIT",
   "author": "Ken Mediavillo <>",
   "scripts": {
-    "develop": "gatsby develop",
-    "serve": "gatsby serve",
+    "develop": "gatsby develop --prefix-paths",
+    "serve": "gatsby serve --prefix-paths",
     "ssr": "npm run build --prefix-paths && npm run serve --prefix-paths",
     "format": "prettier --config ./.prettierrc --write src/**/*.js",
     "build:dir": "mkdirp ./public/icons/",
