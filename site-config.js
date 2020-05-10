@@ -5,6 +5,7 @@ module.exports = {
   siteTitleShort: `GeneralCharlie`,
   siteDescription: `General Charlie Cafe`,
   siteUrl: `https://nookglobal.github.io`,
+  prefix:  `/generalcharlie`,
   themeColor: `#000`,
   backgroundColor: `#fff`,
   pathPrefix: null,
