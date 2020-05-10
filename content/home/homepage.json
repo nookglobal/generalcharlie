@@ -1,0 +1,24 @@
+{
+  "title": "Home",
+  "address": {
+    "details": "Copyright © 2019 General Charlie - Filipino Restaurant / Cafe - All Rights Reserved.",
+    "location": "Shop 1, 10-12 Clarke Street, Crows Nest NSW 2065"
+
+  },
+  "content": "intro.md",
+  "gallery": [{
+    "title": "React Context",
+    "copy": "For global styles.",
+    "image": "../images/gallery/react-context.jpg"
+  },
+  {
+    "title": "Page Transitions",
+    "copy": "Component-based for easy usage.",
+    "image": "../images/gallery/page-transitions.jpg"
+  },
+  {
+    "title": "Intersection Observer",
+    "copy": "Including a polyfill for Safari.",
+    "image": "../images/gallery/intersection-observer.jpg"
+  }]
+}
