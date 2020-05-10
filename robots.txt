@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://nookglobal.github.io/generalcharlie/sitemap.xml
