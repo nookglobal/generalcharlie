@@ -6,10 +6,13 @@ const Nav = () => (
   <Container>
     <ul>
       <li>
-        <Link to="/about">About</Link>
+        <Link to="/about">Menu</Link>
       </li>
       <li>
-        <a href="https://github.com/fabe/gatsby-universal">GitHub</a>
+        <a href="/order">Order</a>
+      </li>
+      <li>
+        <Link to="/about">Contact</Link>
       </li>
     </ul>
   </Container>
