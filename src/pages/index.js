@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Layout from 'components/layout';
 import Box from 'components/box';
 import Title from 'components/title';
+import Paragraph from 'components/paragraph';
 import Gallery from 'components/gallery';
 import IOExample from 'components/io-example';
 import Modal from 'containers/modal';
@@ -14,6 +15,12 @@ const Index = ({ data }) => (
       <Title as="h2" size="large">
         {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
       </Title>
+      <Paragraph>
+        {data.homeJson.address.location}
+      </Paragraph>
+      <Paragraph>
+        {data.homeJson.address.location}
+      </Paragraph>
       <Modal>
         <video
           src="https://i.imgur.com/gzFqNSW.mp4"
@@ -40,6 +47,10 @@ export const query = graphql`
   query HomepageQuery {
     homeJson {
       title
+      address {
+        details
+        location
+      }
       content {
         childMarkdownRemark {
           html
