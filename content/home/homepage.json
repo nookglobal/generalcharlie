@@ -1,24 +1,26 @@
 {
   "title": "Home",
+  "hero": {
+    "copy": "We love coffee and food here in General Charlie",
+    "image": "../images/gallery/gencharlie-main.jpg"
+  },
   "address": {
     "details": "Copyright © 2019 General Charlie - Filipino Restaurant / Cafe - All Rights Reserved.",
     "location": "Shop 1, 10-12 Clarke Street, Crows Nest NSW 2065"
-
   },
   "content": "intro.md",
   "gallery": [{
-    "title": "React Context",
-    "copy": "For global styles.",
-    "image": "../images/gallery/react-context.jpg"
+    "title": "Delivery",
+    "copy": "Get it fresh from crows nest.",
+    "image": "../images/gallery/crows-nest.jpg"
+  },{
+    "title": "Filipino Cafe",
+    "copy": "We have lechon kawali and mang tomas.",
+    "image": "../images/gallery/beef.jpg"
   },
   {
-    "title": "Page Transitions",
-    "copy": "Component-based for easy usage.",
-    "image": "../images/gallery/page-transitions.jpg"
-  },
-  {
-    "title": "Intersection Observer",
-    "copy": "Including a polyfill for Safari.",
-    "image": "../images/gallery/intersection-observer.jpg"
+    "title": "Good Coffee",
+    "copy": "Affordable and delicious.",
+    "image": "../images/gallery/cafe.jpg"
   }]
 }
