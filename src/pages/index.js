@@ -4,6 +4,7 @@ import Layout from 'components/layout';
 import Box from 'components/box';
 import Title from 'components/title';
 import Paragraph from 'components/paragraph';
+import Banner from 'components/banner';
 import Gallery from 'components/gallery';
 import IOExample from 'components/io-example';
 import Modal from 'containers/modal';
@@ -11,29 +12,20 @@ import { graphql } from 'gatsby';
 
 const Index = ({ data }) => (
   <Layout>
-    <Box>
+    <Banner data={data.homeJson.hero} />
+    <center>
+    <br/>
+    <br/>
       <Title as="h2" size="large">
-        {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
+        We are here for you. We are open.
       </Title>
+      <br/>
       <Paragraph>
-        {data.homeJson.address.location}
+          {data.homeJson.address.location}
       </Paragraph>
-      <Paragraph>
-        {data.homeJson.address.location}
-      </Paragraph>
-      <Modal>
-        <video
-          src="https://i.imgur.com/gzFqNSW.mp4"
-          playsInline
-          loop
-          autoPlay
-          muted
-        />
-      </Modal>
-    </Box>
+      <br/>
+    </center>
     <Gallery items={data.homeJson.gallery} />
-    <div style={{ height: '50vh' }} />
-    <IOExample />
   </Layout>
 );
 
@@ -47,6 +39,16 @@ export const query = graphql`
   query HomepageQuery {
     homeJson {
       title
+      hero {
+        copy
+        image {
+          childImageSharp {
+            fluid(maxHeight: 300, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
       address {
         details
         location

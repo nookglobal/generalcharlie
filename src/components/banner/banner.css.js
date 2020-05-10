@@ -1,0 +1,33 @@
+import styled from 'styled-components';
+import MEDIA from 'helpers/mediaTemplates';
+
+export const Container = styled.section`
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 80vh;
+`
+
+export const ImageContainer = styled.div`
+    /* position: absolute; */
+    /* width: 100vh; */
+    position: absolute;
+    background-color: rgb(21, 21, 21, 0.5);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+`;
+
+export const HeroText = styled.h1`
+    z-index: 1;
+    position: absolute;
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    top: 35%;
+
+    width: 100%;
+    ${MEDIA.TABLET`
+        font-size: 2rem;
+    `};
+`;
