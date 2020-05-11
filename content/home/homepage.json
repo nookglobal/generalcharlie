@@ -1,7 +1,7 @@
 {
   "title": "Home",
   "hero": {
-    "copy": "We love coffee and food here in General Charlie",
+    "copy": "General Charlies is Open.",
     "image": "../images/gallery/gencharlie-main.jpg"
   },
   "address": {
@@ -10,17 +10,17 @@
   },
   "content": "intro.md",
   "gallery": [{
-    "title": "Delivery",
-    "copy": "Get it fresh from crows nest.",
+    "title": "Where are we?",
+    "copy": "Shop 1, 10-12 Clarke Street, Crows Nest NSW 2065",
     "image": "../images/gallery/crows-nest.jpg"
   },{
-    "title": "Filipino Cafe",
-    "copy": "We have lechon kawali and mang tomas.",
+    "title": "Pickup / Store Hours",
+    "copy": "Tues-Fri: 7am-3pm - Sat-Sun: 8am-2pm",
     "image": "../images/gallery/beef.jpg"
   },
   {
-    "title": "Good Coffee",
-    "copy": "Affordable and delicious.",
+    "title": "Contact",
+    "copy": "0451146673 - @cafegeneralcharlie - UberEats - Deliveroo",
     "image": "../images/gallery/cafe.jpg"
   }]
 }

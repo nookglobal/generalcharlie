@@ -1,16 +1,16 @@
 import React from 'react';
-import { Container, ImageContainer, HeroText } from './banner.css';
+import { Container, ImageContainer, HeroText, SubText } from './banner.css';
 import Img from 'gatsby-image';
-import Box from 'components/box';
-import Title from 'components/title';
-import Paragraph from 'components/paragraph';
 
 export const Banner = ({ data }) => (
     <Container>
       <ImageContainer aria-hidden='true'>&nbsp;</ImageContainer>
-      <Img fluid={data.image ? data.image.childImageSharp.fluid : {}} alt={'Welcome to General Charlie'} />
+      <Img fluid={data.image ? data.image.childImageSharp.fluid : {}} objectFit="cover" alt={'Welcome to General Charlie'} />
       <HeroText>
           {data.copy}
+        <SubText>
+          <u>Tues-Fri</u> 7am-3pm - <u>Sat-Sun</u> 8am-2pm
+        </SubText>
       </HeroText>
     </Container>
 )

@@ -17,11 +17,18 @@ const Index = ({ data }) => (
     <br/>
     <br/>
       <Title as="h2" size="large">
-        We are here for you. We are open.
+        We are open. You can pick-up.
       </Title>
       <br/>
       <Paragraph>
           {data.homeJson.address.location}
+          <br/><br/>
+          <strong>Pickup: </strong>
+          <a rel="noreffer noopener" href="tel:0451146673">(+61) 451 146 673</a>
+          &nbsp;-&nbsp;
+          <a rel="noreffer noopener" href="https://www.ubereats.com/au/feed?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkdlbmVyYWwlMjBDaGFybGllJTIwQ2FmZSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMkNoSUpDd29XRzlxdkVtc1J5ODBvMUZNaWt3QSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJnb29nbGVfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0EtMzMuODI1ODg4MSUyQyUyMmxvbmdpdHVkZSUyMiUzQTE1MS4xOTk2NjkyJTdE">UberEats</a>
+          &nbsp;-&nbsp;
+          <a rel="noreffer noopener" href="https://deliveroo.com.au/menu/sydney/crowsnest/general-charlie-cafe?day=today&geohash=r3gx8feyvvrh&time=ASAP">Deliveroo</a>
       </Paragraph>
       <br/>
     </center>
@@ -43,7 +50,7 @@ export const query = graphql`
         copy
         image {
           childImageSharp {
-            fluid(maxHeight: 300, quality: 90) {
+            fluid(maxHeight: 500, quality: 90) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
