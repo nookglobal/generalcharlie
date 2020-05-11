@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
+import Paragraph from 'components/paragraph';
 
 export const Container = styled.section`
     display: flex;
     position: relative;
     flex-direction: column;
-    height: 80vh;
+    max-height: 500px;
 `
 
 export const ImageContainer = styled.div`
@@ -22,12 +23,18 @@ export const HeroText = styled.h1`
     z-index: 1;
     position: absolute;
     color: white;
-    font-size: 70px;
+    font-size: 3.2rem;
     text-align: center;
     top: 35%;
 
     width: 100%;
     ${MEDIA.TABLET`
-        font-size: 2rem;
+        font-size: 2.6rem;
     `};
+`;
+
+export const SubText = styled(Paragraph)`
+    color: #ccc;
+    text-align: center;
+    padding-top: 1em;
 `;

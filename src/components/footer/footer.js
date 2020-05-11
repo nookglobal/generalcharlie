@@ -1,8 +1,7 @@
 import React from 'react';
 import posed from 'react-pose';
-import { Container, Copy } from './footer.css';
+import { Container, Copy, NavContainer } from './footer.css';
 import Logo from 'components/logo';
-import Nav from 'components/footer/nav';
 
 // Example of a component-specific page transition
 const AnimatedContainer = posed.div({
@@ -24,7 +23,7 @@ const Footer = ({ title }) => (
   <AnimatedContainer>
     <Container>
       <Logo height={40}/>
-      <Nav />
+      <NavContainer />
       <Copy>
       Copyright © 2019 General Charlie<br/>
       Filipino Restaurant / Cafe - All Rights Reserved.<br/>
