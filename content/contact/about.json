@@ -1,14 +1,10 @@
 {
-  "title": "Home",
-  "hero": {
-    "copy": "General Charlie is Open.",
-    "image": "../images/gallery/gencharlie-main.jpg"
-  },
+  "title": "Contact",
+  "content": "content.md",
   "address": {
     "details": "Copyright © 2019 General Charlie - Filipino Restaurant / Cafe - All Rights Reserved.",
     "location": "Shop 1, 10-12 Clarke Street, Crows Nest NSW 2065"
   },
-  "content": "intro.md",
   "gallery": [{
     "title": "Where are we?",
     "copy": "Shop 1, 10-12 Clarke Street, Crows Nest NSW 2065",

@@ -1,27 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Layout from 'components/layout';
-import Box from 'components/box';
-import Title from 'components/title';
-import Paragraph from 'components/paragraph';
-import Banner from 'components/banner';
-import Gallery from 'components/gallery';
-import IOExample from 'components/io-example';
-import Modal from 'containers/modal';
 import { graphql } from 'gatsby';
+import Layout from 'components/layout';
+import Paragraph from 'components/paragraph';
+import Gallery from 'components/gallery';
+import Map from 'components/map';
 
-const Index = ({ data }) => (
+const Contact = ({ data }) => (
   <Layout>
-    <Banner data={data.homeJson.hero} />
+    <Map />
+    <br/><br/>
     <center>
-    <br/>
-    <br/>
-      <Title as="h2" size="large">
-        We are open. You can pick-up.
-      </Title>
-      <br/>
       <Paragraph>
-          {data.homeJson.address.location}
+          {data.contactJson.address.location}
           <br/><br/>
           <strong>Pickup: </strong>
           <a rel="noreffer noopener" href="tel:0451146673">(+61) 451 146 673</a>
@@ -32,39 +23,28 @@ const Index = ({ data }) => (
       </Paragraph>
       <br/>
     </center>
-    <Gallery items={data.homeJson.gallery} />
+    <Gallery items={data.contactJson.gallery} />
   </Layout>
 );
 
-Index.propTypes = {
+Contact.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-export default Index;
+export default Contact;
 
 export const query = graphql`
-  query HomepageQuery {
-    homeJson {
+  query ContactQuery {
+    contactJson {
       title
-      hero {
-        copy
-        image {
-          childImageSharp {
-            fluid(maxHeight: 500, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
+      content {
+        childMarkdownRemark {
+          html
         }
       }
       address {
         details
         location
-      }
-      content {
-        childMarkdownRemark {
-          html
-          rawMarkdownBody
-        }
       }
       gallery {
         title

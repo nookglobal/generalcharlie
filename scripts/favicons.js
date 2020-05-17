@@ -6,6 +6,7 @@ const {
   siteTitleShort,
   themeColor,
   backgroundColor,
+  prefix,
 } = require('../site-config');
 
 const dir = path.resolve(__dirname, '../public/icons/');
@@ -15,7 +16,7 @@ if (!fs.existsSync(dir)) {
 
 const source = 'src/images/icon.png';
 const configuration = {
-  path: '/generalcharlie/icons/',
+  path: `${prefix}/icons/`,
   appName: siteTitleShort,
   appDescription: null,
   developerName: null,
@@ -26,7 +27,7 @@ const configuration = {
   theme_color: themeColor,
   display: 'standalone',
   orientation: 'any',
-  start_url: '/',
+  start_url: `${prefix}/`,
   version: '1.0',
   logging: true,
   icons: {
