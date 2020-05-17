@@ -99,7 +99,7 @@ const TabMenu = ({ categories, items }) => {
                         { groupedItems['drinks-espresso'] }
                         <AnimatedItemsH3>Non-coffee</AnimatedItemsH3>
                         { groupedItems['drinks-non-coffee'] }
-                        <AnimatedItemsH3>Organice Tea</AnimatedItemsH3>
+                        <AnimatedItemsH3>Organic Tea</AnimatedItemsH3>
                         { groupedItems['drinks-organic-tea'] }
                         <AnimatedItemsH3>Bottled/Canned</AnimatedItemsH3>
                         { groupedItems['drinks-bottled-canned'] }
