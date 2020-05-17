@@ -83,7 +83,6 @@ const Head = ({
       content={`${prefix}/icons/mstile-310x310.png`}
       name="msapplication-square310x310"
     />
-
     <link href={`${prefix}/manifest.json`} rel="manifest" />
 
     <link
