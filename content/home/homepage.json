@@ -1,7 +1,7 @@
 {
   "title": "Home",
   "hero": {
-    "copy": "General Charlies is Open.",
+    "copy": "General Charlie is Open.",
     "image": "../images/gallery/gencharlie-main.jpg"
   },
   "address": {
@@ -12,15 +12,15 @@
   "gallery": [{
     "title": "Where are we?",
     "copy": "Shop 1, 10-12 Clarke Street, Crows Nest NSW 2065",
-    "image": "../images/gallery/crows-nest.jpg"
+    "image": "../images/gallery/crows-nest2.jpg"
   },{
     "title": "Pickup / Store Hours",
     "copy": "Tues-Fri: 7am-3pm - Sat-Sun: 8am-2pm",
-    "image": "../images/gallery/beef.jpg"
+    "image": "../images/gallery/bowl.webp"
   },
   {
     "title": "Contact",
     "copy": "0451146673 - @cafegeneralcharlie - UberEats - Deliveroo",
-    "image": "../images/gallery/cafe.jpg"
+    "image": "../images/gallery/platter.jpg"
   }]
 }
