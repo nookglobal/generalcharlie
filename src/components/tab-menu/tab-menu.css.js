@@ -68,7 +68,6 @@ export const MenuContainer =styled.section`
             }
             h2 {
                 font-weight: bold;
-                text-transform: uppercase;
             }
             .dots {
                 flex: 1;
