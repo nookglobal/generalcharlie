@@ -50,6 +50,7 @@ const TabMenu = ({ categories, items }) => {
     });
 
     const selectCategory = (tag, index) => {
+        window.scrollTo(0, 0);
         setSelectedCategory({
             tag: tag,
             index: index
@@ -99,7 +100,7 @@ const TabMenu = ({ categories, items }) => {
                         { groupedItems['drinks-espresso'] }
                         <AnimatedItemsH3>Non-coffee</AnimatedItemsH3>
                         { groupedItems['drinks-non-coffee'] }
-                        <AnimatedItemsH3>Organice Tea</AnimatedItemsH3>
+                        <AnimatedItemsH3>Organic Tea</AnimatedItemsH3>
                         { groupedItems['drinks-organic-tea'] }
                         <AnimatedItemsH3>Bottled/Canned</AnimatedItemsH3>
                         { groupedItems['drinks-bottled-canned'] }
@@ -111,7 +112,16 @@ const TabMenu = ({ categories, items }) => {
                     }}/>
                 </Sidebar>
             </CategoryBody>
-            
+            <br/>
+            <StyledList>
+                {
+                    categories.map((category, index) => (
+                        <StyledLi key={category.tag} isSelected={(selectedCategory.tag === category.tag)} onClick={() => selectCategory(category.tag, index)}>
+                            {category.title}
+                        </StyledLi>
+                    ))
+                }
+            </StyledList>
         </Container>
     )
 };
