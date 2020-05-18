@@ -50,6 +50,7 @@ const TabMenu = ({ categories, items }) => {
     });
 
     const selectCategory = (tag, index) => {
+        window.scrollTo(0, 0);
         setSelectedCategory({
             tag: tag,
             index: index
@@ -111,7 +112,16 @@ const TabMenu = ({ categories, items }) => {
                     }}/>
                 </Sidebar>
             </CategoryBody>
-            
+            <br/>
+            <StyledList>
+                {
+                    categories.map((category, index) => (
+                        <StyledLi key={category.tag} isSelected={(selectedCategory.tag === category.tag)} onClick={() => selectCategory(category.tag, index)}>
+                            {category.title}
+                        </StyledLi>
+                    ))
+                }
+            </StyledList>
         </Container>
     )
 };

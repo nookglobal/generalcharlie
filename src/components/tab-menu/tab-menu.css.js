@@ -55,6 +55,7 @@ export const MenuContainer =styled.section`
             font-style: italic;
             font-family: 'Sacramento', cursive;
             font-size: 1.2em;
+            color: #55565b;
         }
         li {
             margin: 20px 20px;
@@ -67,6 +68,7 @@ export const MenuContainer =styled.section`
             }
             h2 {
                 font-weight: bold;
+                text-transform: uppercase;
             }
             .dots {
                 flex: 1;
