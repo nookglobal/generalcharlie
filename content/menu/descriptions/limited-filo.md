@@ -4,6 +4,6 @@
 
 <ul>
 <h3>Add-ons</h3>
-<li>Garlic rice, java rice +4</li>
+<li>Garlic rice +4</li>
 <li>Atchara +3</li>
 </ul>

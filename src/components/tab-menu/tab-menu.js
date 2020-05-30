@@ -60,6 +60,7 @@ const TabMenu = ({ categories, items }) => {
     const groupedItems = {
         'all-day': items.map((item) => renderItem('all-day', item)),
         'limited-filo': items.map((item) => renderItem('limited-filo', item)),
+        'limited-filo-desserts': items.map((item) => renderItem('limited-filo-desserts', item)),
         //TODO make this dynamic
         'drinks-milkshakes': items.map((item) => renderItem('milkshakes', item)),
         'drinks-specialty': items.map((item) => renderItem('specialty', item)),
@@ -75,7 +76,7 @@ const TabMenu = ({ categories, items }) => {
                 {
                     categories.map((category, index) => (
                         <StyledLi key={category.tag} isSelected={(selectedCategory.tag === category.tag)} onClick={() => selectCategory(category.tag, index)}>
-                            {category.title}
+                            <center>{category.title}</center>
                         </StyledLi>
                     ))
                 }
@@ -90,6 +91,9 @@ const TabMenu = ({ categories, items }) => {
                     </AnimatedMenu>
                     <AnimatedMenu pose={isVisible(selectedCategory.tag, 'limited-filo')}>
                         { groupedItems['limited-filo'] }
+                    </AnimatedMenu>
+                    <AnimatedMenu pose={isVisible(selectedCategory.tag, 'limited-filo-desserts')}>
+                        { groupedItems['limited-filo-desserts'] }
                     </AnimatedMenu>
                     <AnimatedMenu pose={isVisible(selectedCategory.tag, 'drinks')}>
                         <AnimatedItemsH3>Milkshakes</AnimatedItemsH3>
