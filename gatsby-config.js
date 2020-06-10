@@ -1,7 +1,7 @@
 const siteConfig = require('./site-config');
-const pathPrefix = `generalcharlie`;
+const pathPrefix = `/`;
 module.exports = {
-  pathPrefix: `/${pathPrefix}`,
+  pathPrefix: `${pathPrefix}`,
   siteMetadata: {
     ...siteConfig,
   },
@@ -14,7 +14,7 @@ module.exports = {
       modifyURLPrefix: {
         // If `pathPrefix` is configured by user, we should replace
         // the default prefix with `pathPrefix`.
-        "/": `${pathPrefix}/`,
+        "/": `${pathPrefix}`,
       },
     },
     `gatsby-transformer-json`,
